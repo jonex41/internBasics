@@ -1,0 +1,155 @@
+import "dart:math";
+void main() {
+  
+//   var random = Random();
+  
+//   var age = random.nextInt(1000)+1;
+  
+//   var foo = random.nextDouble();
+//   var isSeen = random.nextBool();
+  
+//   print(age);
+//   // using switch statement
+//   switch(age){
+      
+//     case 1:
+      
+//       print("Hafsah");
+//       break;
+//     case 2:
+      
+//       print("John");
+//       break;
+      
+//     case 3:
+      
+//       print("Muhammed");
+      
+    
+//       break;
+//       case 4:
+      
+//       print("Foo");
+      
+    
+//       break;
+//       default:
+      
+//       print("None of the above");
+      
+      
+//   }
+  
+//   // object
+//   Dog dogR = Dog();
+//   //Polymorphim
+//   Animal dog = Dog();
+  
+//   dog.eatGrass();
+//   dog.runFast();
+  
+  House myHouse = House();
+ // myHouse.newHome();
+  
+
+}
+
+
+ class Animal{
+  
+   void runFast(){
+    
+    print("i can run fast");
+  }
+   
+   void eatGrass(){
+     
+     print("i do eat grass");
+   }
+   
+   void eatMeat(){
+     print("i do eat meat");
+   }
+}
+
+class Cow extends Animal{
+  
+  @override
+  eatMeat(){
+    print("i dont eat meat");
+  }
+  
+  @override
+  void runFast(){
+    
+    print("Seriously ooo, i cant run fast");
+  }
+  
+}
+
+class Dog extends Animal implements MyMustDo{
+  
+  @override
+  void eatGrass(){
+    super.eatGrass();
+    print("i dont eat meat");
+  }
+  
+  // method overloading
+//    void eatGrass(){
+//     super.eatGrass();
+//     print("i dont eat meat");
+//   }
+//    void eatGrass(String name){
+//     super.eatGrass();
+//     print("i dont eat meat");
+//   }
+  
+
+  @override
+  void mustEat() {
+    // TODO: implement mustEat
+  }
+
+  @override
+  void mustRun() {
+    // TODO: implement mustRun
+  }
+  
+ 
+  
+}
+
+ abstract class MyMustDo {
+    
+   
+   
+   void mustEat();
+   
+    void mustRun(){}
+    
+  }
+
+class House{
+  
+  House(){
+    print("i am here");
+  }
+  
+  House.newHome(){
+    print("i am here");
+  }
+  
+  House.oldHome(){
+    print("i am here");
+  }
+  
+
+}
+
+
+
+
+
+
+
