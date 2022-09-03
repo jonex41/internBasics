@@ -1,0 +1,84 @@
+
+void main() {
+
+ // var car = Car();
+//  var lanboCar = Car.buga();
+ // var bugaCar = Car.lanbo();
+  
+  // using mixin
+  var mercedis = Mercedis();
+  
+  mercedis.moveFast();
+  mercedis.getTime();
+
+
+}
+
+class Car{
+  
+  // this is called a primary constructor
+  Car(){
+    
+    print('i am a defualt constructor');
+    
+  }
+  
+  
+  // Secondary Constructor
+  Car.lanbo(){
+    
+    print('i am lanbo');
+  }
+  
+  Car.buga(){
+    
+    print('i am bugatti');
+  }
+  
+  
+ 
+}
+
+
+
+class Mercedis extends Bugatti with FunctionOFAClass , GetTime, lanbo{
+  
+  
+}
+
+class Bugatti{
+  
+  
+}
+
+mixin lanbo{
+  
+  
+}
+
+mixin FunctionOFAClass{
+  
+  
+  void drive(){
+    print('i can drive');
+  }
+  
+  void moveFast(){
+    
+    print('i am moving fast');
+  }
+  
+  void moveSlow(){
+    
+    print('i am moving slow');
+  }
+  
+}
+
+mixin GetTime{
+  
+  void getTime(){
+    
+    print('my time is this');
+  }
+}
